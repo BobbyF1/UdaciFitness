@@ -1,7 +1,19 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'
-import { black, white } from './colors.js'
+import { black, red, orange, blue, lightPurp, pink } from './colors.js'
+
+const styles = StyleSheet.create({
+  iconContainer: {
+    padding: 5,
+    borderRadius: 8, 
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 20,
+  }
+})
 
 export function getMetricMetaInfo (metric) {
   const info = {
@@ -13,7 +25,7 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <MaterialIcons
               name='directions-run'
               color={black}
@@ -31,7 +43,7 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <MaterialCommunityIcons
               name='bike'
               color={black}
@@ -49,7 +61,7 @@ export function getMetricMetaInfo (metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <MaterialCommunityIcons
               name='swim'
               color={black}
@@ -67,7 +79,7 @@ export function getMetricMetaInfo (metric) {
       type: 'slider',
       getIcon() {
         return (
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <FontAwesome
               name='bed'
               color={black}
@@ -85,7 +97,7 @@ export function getMetricMetaInfo (metric) {
       type: 'slider',
       getIcon() {
         return (
-          <View>
+          <View style={[styles.iconContainer, {backgroundColor: red}]}>
             <MaterialCommunityIcons
               name='food'
               color={black}
